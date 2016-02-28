@@ -83,7 +83,7 @@ IIFE's give us some protection from this nightmare.
 
 The code that goes inside of our IIFE is pretty straight forward:
 
-```javascipt
+```javascript
 (function () {
   angular
     .module('app', []);
@@ -99,7 +99,22 @@ it in `app.js` and what we have called it in our `ng-app` directive in the HTML:
 they should be identical, otherwise Angular will have no clue what you're
 telling it to do.
 
-## Controllers
+> Angular is also generally nice enough to give us helpful errors when we make
+> mistakes. Supposing you did misspell `app` in either `app.js` or your `ng-app`
+> `Directive`, you'll get a lovely error message like this:
+> ![App Error](app-error.png)
+> This might look scary at first, but notice that it gives us a link to click
+> on:
+> https://docs.angularjs.org/error/$injector/modulerr?p0=app&p1=Error:%20%E2%80%A6ogleapis.com%2Fajax%2Flibs%2Fangularjs%2F1.5.0%2Fangular.min.js:20:449
+
+Another important thing is the empty array, `[]`, that we place after the comma
+in the `module` method. In the future, you'll be listing "dependencies" in here,
+which can either be built-in functionality that you'd like to use, or 3rd-party
+libraries that are made to work with Angular. We'll explore more of that later.
+For the time being, make sure to not forget this empty array, as Angular will
+complain quite a bit without it.
+
+## Our First Controller
 
 To speak on a high level, a `Controller` is created by the Angular `Directive`
 `ng-controller`. A `Controller` is a regular JavaScript object that allows us to

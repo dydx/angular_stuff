@@ -6,24 +6,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
   <script>
     (function () {
-
-      function MainController () {
-        var vm = this;
-
-        vm.name = 'Johnny';
-      }
-
       angular
-        .module('app', [])
-        .controller('mainController', MainController);
+        .module('app', []);
 
     })();
   </script>
 </head>
-<body ng-app="app">
-  <div ng-controller="mainController as vm">
-    <h1>{{vm.name}}</h1>
-  </div>
+<body ng-app="app2">
+  
 </body>
 </html>
 
