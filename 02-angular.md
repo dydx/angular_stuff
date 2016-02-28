@@ -138,3 +138,7 @@ In our `app.js` file, let's add the following code
 +    .controller('mainController', MainController);
 })();
 ```
+
+> **Note**
+>
+> The green lines that start with `+`'s denote what is *new* to the file
