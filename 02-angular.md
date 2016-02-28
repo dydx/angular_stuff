@@ -166,3 +166,36 @@ Save your work and open it up in the browser. If all went well, you should end
 up with a page that looks like this:
 
 ![First Controller Demo](first-controller.png)
+
+So, what is going on here? There's a lot of new syntax going on. First things
+first, `app.js`.
+
+In `app.js`, we are defining a new JavaScript function called `MainController`.
+Inside of `MainController`, we are assigning a variable `vm` (short for
+ViewModel) to `this`.
+
+> **Note**
+>
+> For small applications, `var vm = this;` might not be very important, though
+> as your app grows, and the code you write in your controller gets longer, the
+> meaning of `this` will start to become ambigious.
+> 
+> Some of this ambiguity is handled nicely with newer ES6 syntax, though let's
+> stick to "best practices" in ES5 for the time being.
+
+After we've defined `vm`, we then add a property to it called `name`, and assign
+it a value of `"Johnny"`.
+
+Next, we have to inject this `Controller` into Angular. We can do this with the
+`controller` method that comes with Angular. To do this, all we need is a string
+that contains the name of the `Controller` as we wish to reference it, and then
+the function name passed in afterward.
+
+In our example right now, we're referencing the controller with the string
+`'mainController'`, and then passing in the proper name, `MainController`.
+
+```javascript
+    //...
+    .controller('mainController', MainController);
+    //...
+```
