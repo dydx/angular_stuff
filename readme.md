@@ -2,5 +2,5 @@ AngularJS
 ---------
 
 ## Chapters
-* [01-angular.md](Intro)
-* [02-angular.md](More Directives)
+* [Intro](01-angular.md)
+* [More Angular](01-angular.md)
