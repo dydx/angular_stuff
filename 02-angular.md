@@ -99,6 +99,7 @@ it in `app.js` and what we have called it in our `ng-app` directive in the HTML:
 they should be identical, otherwise Angular will have no clue what you're
 telling it to do.
 
+> **Note**
 > Angular is also generally nice enough to give us helpful errors when we make
 > mistakes. Supposing you did misspell `app` in either `app.js` or your `ng-app`
 > `Directive`, you'll get a lovely error message like this:
