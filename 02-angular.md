@@ -124,4 +124,17 @@ handle data contained within Angular's `$scope` object.
 To bring it down a bit, lets take a look at an example of a `Controller` and see
 what it lets us do.
 
+In our `app.js` file, let's add the following code
 
+```javascript
++function MainController {
++  var vm = this;
++  vm.name = "Johnny";
++}
+
+(function () {
+  angular
+    .module('app', [])
++    .controller('mainController', MainController);
+})();
+```
