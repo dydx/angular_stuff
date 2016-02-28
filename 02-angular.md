@@ -125,18 +125,19 @@ what it lets us do.
 
 In our `app.js` file, let's add the following code
 
-```diff
-(function () {
-+ function MainController {
-+   var vm = this;
-+   vm.name = "Johnny";
-+ }
-
-  angular
-    .module('app', [])
-+    .controller('mainController', MainController);
-})();
-```
+> `app.js`
+> ```diff
+> (function () {
+> + function MainController {
+> +   var vm = this;
+> +   vm.name = "Johnny";
+> + }
+> 
+>   angular
+>     .module('app', [])
+> +    .controller('mainController', MainController);
+> })();
+> ```
 
 > **Note**
 >
