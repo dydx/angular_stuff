@@ -127,12 +127,12 @@ what it lets us do.
 In our `app.js` file, let's add the following code
 
 ```diff
-+function MainController {
-+  var vm = this;
-+  vm.name = "Johnny";
-+}
-
 (function () {
++ function MainController {
++   var vm = this;
++   vm.name = "Johnny";
++ }
+
   angular
     .module('app', [])
 +    .controller('mainController', MainController);
