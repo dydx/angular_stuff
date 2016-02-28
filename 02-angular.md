@@ -126,7 +126,7 @@ what it lets us do.
 
 In our `app.js` file, let's add the following code
 
-```javascript
+```diff
 +function MainController {
 +  var vm = this;
 +  vm.name = "Johnny";
