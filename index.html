@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
+  <script>
+    (function () {
+
+      function MainController () {
+        var vm = this;
+
+        vm.name = 'Johnny';
+      }
+
+      angular
+        .module('app', [])
+        .controller('mainController', MainController);
+
+    })();
+  </script>
+</head>
+<body ng-app="app">
+  <div ng-controller="mainController as vm">
+    <h1>{{vm.name}}</h1>
+  </div>
+</body>
+</html>
+
