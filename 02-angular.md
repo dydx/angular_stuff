@@ -145,18 +145,19 @@ In our `app.js` file, let's add the following code
 
 With that saved, we now need to add some stuff to our HTML code:
 
-```diff
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
-    <script src="app.js"></script> 
-  </head>
-  <body ng-app="app">
-+    <div ng-controller="mainController as vm">
-+       <h2>Hello, {{vm.name}}</h2>
-+    </div>
-  </body>
-</html>
-```
+> `index.html`
+> ```diff
+> <!DOCTYPE html>
+> <html lang="en">
+>   <head>
+>     <meta charset="UTF-8">
+>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
+>     <script src="app.js"></script> 
+>   </head>
+>   <body ng-app="app">
+> +    <div ng-controller="mainController as vm">
+> +       <h2>Hello, {{vm.name}}</h2>
+> +    </div>
+>   </body>
+> </html>
+> ```
