@@ -53,7 +53,6 @@ Here's an example of some "boilerplate" HTML for starting an Angular app:
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
     <script src="app.js"></script> 
-    <title></title>
   </head>
   <body ng-app="app">
 
@@ -142,3 +141,21 @@ In our `app.js` file, let's add the following code
 > **Note**
 >
 > The green lines that start with `+`'s denote what is *new* to the file
+
+With that saved, we now need to add some stuff to our HTML code:
+
+```diff
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
+    <script src="app.js"></script> 
+  </head>
+  <body ng-app="app">
++    <div ng-controller="mainController as vm">
++       <h2>Hello, {{vm.name}}</h2>
++    </div>
+  </body>
+</html>
+```
