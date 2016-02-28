@@ -135,7 +135,7 @@ In our `app.js` file, let's add the following code
 > 
 >   angular
 >     .module('app', [])
-> +    .controller('mainController', MainController);
+> +   .controller('mainController', MainController);
 > })();
 > ```
 
@@ -155,9 +155,9 @@ With that saved, we now need to add some stuff to our HTML code:
 >     <script src="app.js"></script> 
 >   </head>
 >   <body ng-app="app">
-> +    <div ng-controller="mainController as vm">
-> +       <h2>Hello, {{vm.name}}</h2>
-> +    </div>
+> +   <div ng-controller="mainController as vm">
+> +     <h2>Hello, {{vm.name}}</h2>
+> +   </div>
 >   </body>
 > </html>
 > ```
@@ -195,7 +195,14 @@ In our example right now, we're referencing the controller with the string
 `'mainController'`, and then passing in the proper name, `MainController`.
 
 ```javascript
-    //...
-    .controller('mainController', MainController);
-    //...
+  //...
+  .controller('mainController', MainController);
+  //...
 ```
+
+## Let's Add Some More Functionality
+
+Going with what we know about `Controller`s, let's explore adding some new
+features to our app.
+
+
