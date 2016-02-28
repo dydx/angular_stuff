@@ -128,7 +128,7 @@ In our `app.js` file, let's add the following code
 > `app.js`
 > ```diff
 > (function () {
-> + function MainController {
+> + function MainController () {
 > +   var vm = this;
 > +   vm.name = "Johnny";
 > + }
@@ -161,3 +161,8 @@ With that saved, we now need to add some stuff to our HTML code:
 >   </body>
 > </html>
 > ```
+
+Save your work and open it up in the browser. If all went well, you should end
+up with a page that looks like this:
+
+![First Controller Demo](first-controller.png)
