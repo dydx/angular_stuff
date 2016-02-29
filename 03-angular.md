@@ -50,6 +50,7 @@ skipped to this section from somewhere else:
 >     .module('app', [])
 >     .controller('petsController', PetsController);
 > })();
+> ```
 
 > **index.html**
 > ```html
