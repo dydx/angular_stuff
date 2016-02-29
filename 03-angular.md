@@ -108,9 +108,7 @@ and pull our `pets` data into it:
 >     .controller('petsController', PetsController);
 > })();
 
-With that saved, we can... simply load up our `index.html` and check to see that
-everything still works OK. Nothing we did in `app.js` affects the markup, which
-is nice!
+With that saved, we can... simply load up our `index.html` in the browser and check to see that everything still works OK. Nothing we did in `app.js` affects the markup, which is nice!
 
 ## Whats the big deal?
 
