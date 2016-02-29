@@ -22,12 +22,7 @@ to "bind" data from one area of our application to another (like we saw with the
 
 # New Stuff
 Building on top of that knowledge, we're going to explore some more built in
-features that Angular gives us. Namely:
-
-* `Controllers`
-* `Services`
-* `filters`
-* and a few more special `Directives`
+features that Angular gives us. Namely `Controllers` and a few more special `Directives`
 
 ## A "Real" Angular App
 Before we get too deep into exploring more specific Angular features, we should
@@ -302,3 +297,24 @@ Secondly, we've added some buttons with `ng-click` `Directives`. Inside of these
 With our `app.js` and `index.html` saved, lets view it in the browser:
 
 ![In Action](http://g.recordit.co/dQRIJyoD5y.gif)
+
+## Vocabulary
+
+We built on top of the previous lesson and got more comfortable using Angular's
+terminology, namely with `Directives` and `Controllers`. We also learned about
+Immediately Invoked Function Expressions (IIFEs).
+
+## Review
+
+In this section, we learned how to:
+
+* Start writing a 'real' Angular app
+* Use Immediately Invoked Function Expressions (IIFEs)
+* Use more of Angular's `Directives`
+* Write and inject `Controllers`
+
+## What's To Come
+
+In the next section, we're going to look at using `Services` and `Factories` to
+contain our data (such as lists, or even calls to APIs). We'll also cover what
+`filters` are and how we can use them to format some of our data and sort it.
