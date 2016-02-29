@@ -165,6 +165,7 @@ ViewModel) to `this`.
 > Some of this ambiguity is handled nicely with newer ES6 syntax, though let's
 > stick to "best practices" in ES5 for the time being.
 
+
 After we've defined `vm`, we then add a property to it called `name`, and assign
 it a value of `"Johnny"`.
 
@@ -180,6 +181,7 @@ In our example right now, we're referencing the controller with the string
   //...
   .controller('mainController', MainController);
   //...
+```
 
 With that saved, we now need to add some stuff to our HTML code:
 
@@ -207,8 +209,6 @@ up with a page that looks like this:
 
 So, what is going on here? There's a lot of new syntax going on. First things
 first, `app.js`.
-
-```
 
 Then, in our HTML, we are simply asking for the value contained inside of
 `vm.name` and displaying it onto the page.
