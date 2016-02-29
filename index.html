@@ -21,6 +21,10 @@
         vm.decrement = function () {
           vm.count--;
         }
+
+        vm.isCountZero = function () {
+          return vm.count === 0;
+        }
       }
 
       angular
@@ -36,7 +40,7 @@
     <div>{{vm.count}}</div>
 
     <button ng-click="vm.increment()">+</button>
-    <button ng-click="vm.decrement()">-</button>
+    <button ng-click="vm.decrement()" ng-disabled="vm.isCountZero()">-</button>
     <button ng-click="vm.reset()">reset</button>
   </div>
 </body>

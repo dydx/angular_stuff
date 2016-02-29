@@ -298,6 +298,83 @@ With our `app.js` and `index.html` saved, lets view it in the browser:
 
 ![In Action](http://g.recordit.co/dQRIJyoD5y.gif)
 
+Using the app for a minute, you might notice that clicking the `-` button a
+bunch of times will result in us eventually getting negative numbers. Maybe we
+could write some more functionality that would limit how low the numbers could
+get?
+
+Let's work out how we'd make the `-` button stop working after the user gets to
+0:
+
+> **app.js**
+```diff
+> (function () {
+>   function MainController () {
+>     var vm = this;
+>     vm.count = 0;
+> 
+>     vm.reset = function () {
+>       vm.count = 0;
+>     }
+> 
+>     vm.increment = function () {
+>       vm.count++;
+>     }
+> 
+>     vm.decrement = function () {
+>       vm.count--;
+>     }
+> 
+> +   vm.isCountZero = function () {
+> +     return vm.count === 0;
+> +   }
+>   }
+> 
+>   angular
+>     .module('app', [])
+>     .controller('mainController', MainController);
+> })();
+```
+
+Here we've just defined a predicate function that will return true or false
+depending on whether `vm.count` is 0. We will use this in our HTML to turn off
+to `-` button when the user clicks down to 0.
+
+> **index.html**
+> ```diff
+> <!DOCTYPE html>
+> <html lang="en">
+>   <head>
+>     <meta charset="UTF-8">
+>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
+>     <script src="app.js"></script> 
+>   </head>
+>   <body ng-app="app">
+>     <div ng-controller="mainController as vm">
+>       <h2>Hello, {{vm.name}}</h2>
+>       <h2>Counter App</h2>
+>
+>       <div>{{vm.count}}</div>
+> 
+>       <button ng-click="vm.increment()">+</button>
+> -     <button ng-click="vm.decrement()">-</button>
+> +     <button ng-click="vm.decrement()"
+> +             ng-disabled="vm.isCountZero()">-</button>
+>       <button ng-click="vm.reset()">reset</button>
+>     </div>
+>   </body>
+> </html>
+> ```
+
+By just adding a call to the `ng-disabled` `Directive and supplying it our
+`Controller's` `vm.isCountZero()` method, we can turn the button off when the
+counter is at zero.
+
+On a stylistic or aesthetic level, we've also made the button take up two lines
+in our markup instead of just on. I feel like this can be a good decision once
+we start adding many CSS attributes and `Directives` to our elements because we
+can quickly see, line by line, what it's doing.
+
 ## Vocabulary
 
 We built on top of the previous lesson and got more comfortable using Angular's
