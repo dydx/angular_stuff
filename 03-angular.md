@@ -30,3 +30,47 @@ This helps keep our `Controllers` "skinny".
 
 Using what we have from our previous "pets" example, we can extract some
 functionality into a `Service` and make our `Controller` a bit more manageable.
+
+Here is the current code, in case you don't have it readily available or have
+skipped to this section from somewhere else:
+
+**app.js**
+```javascript
+(function () {
+  function PetsController () {
+    var vm = this;
+    vm.pets = [
+      {name: 'Luna', type: 'dog', owner: 'Jos'},
+      {name: 'Boozer', type: 'dog', owner: 'Jos'},
+      {name: 'Sally', type: 'cat', owner: 'Josh'}
+    ];
+  }
+
+  angular
+    .module('app', [])
+    .controller('petsController', PetsController);
+})();
+```
+
+**index.html**
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
+  </head>
+  <body ng-app="app">
+    <div ng-controller="petsController as vm">
+      <h2>Pets</h2>
+      <ul>
+        <li ng-repeat="pet in vm.pets | orderBy : 'owner'">
+          {{pet.owner}} has a {{pet.type}} named {{pet.name}}
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+```

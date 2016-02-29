@@ -471,12 +471,13 @@ array is aliased to `pet`, which we can then use inside of the loop to display
 bits of information, such as `pet.name` or `pet.owner`.
 
 While still discussing `ng-repeat` as we've used it, you may also notice the `|`
-and the words `orderBy : 'owner'`-- the `|` is called a `Filter`, and `orderBy`
+and the words `orderBy : 'owner'`-- the `|` is called a pipe, and `orderBy`
 is a built in `Filter` that takes an array of Objects and arranges them
 according to the argument supplied to it.
 
 In our instance, we're telling Angular to order the pets alphabetically by the
-owner's name.
+owner's name. The string could be read as "alphabetically order `vm.pets` by the
+owners name, then iterate over `vm.pets`, aliasing each item as `pet`"
 
 How cool is that?
 
@@ -502,5 +503,4 @@ In this section, we learned how to:
 ## What's To Come
 
 In the next section, we're going to look at using `Services` and `Factories` to
-contain our data (such as lists, or even calls to APIs). We'll also cover what
-`filters` are and how we can use them to format some of our data and sort it.
+contain our data (such as lists, or even calls to APIs). 
