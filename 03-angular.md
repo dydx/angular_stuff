@@ -73,7 +73,7 @@ First, let's add a new `Controller` to `app.js` called `PetsController`:
 Next, lets work on our HTML and adding `Directives` to display our data:
 
 > **index.html**
-> ```html
+> ```diff
 > <!DOCTYPE html>
 >   <html lang="en">
 >     <head>
