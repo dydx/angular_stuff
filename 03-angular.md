@@ -58,9 +58,9 @@ First, let's add a new `Controller` to `app.js` called `PetsController`:
 > + function PetsController () {
 > +   var vm = this;
 > +   vm.pets = [
-> +     {name: 'Luna', type: 'dog', owner: 'Jos'},
-> +     {name: 'Boozer', type: 'dog', owner: 'Jos'},
-> +     {name: 'Sally', type: 'cat', owner: 'Josh'}
+> +     {name: 'Luna', type: 'dog', owner: 'Jos', gender: 'female'},
+> +     {name: 'Boozer', type: 'dog', owner: 'Jos', gender: 'male'},
+> +     {name: 'Sally', type: 'cat', owner: 'Josh', gender: 'female'}
 > +   ];
 > + }
 > 
@@ -69,6 +69,10 @@ First, let's add a new `Controller` to `app.js` called `PetsController`:
 > +   .controller('petsController', PetsController');
 > })();
 > ```
+
+Here, we've created a very simple `Controller` that just contains a list of
+pets. We've also injected it into our Angular app through the `controller`
+method and given it the name `'petsController'`.
 
 Next, lets work on our HTML and adding `Directives` to display our data:
 
