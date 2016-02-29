@@ -98,7 +98,7 @@ and pull our `pets` data into it:
 > -     {name: 'Boozer', type: 'dog', owner: 'Jos'},
 > -     {name: 'Sally', type: 'cat', owner: 'Josh'}
 > -   ];
-> +   var pets = petsService
+> +   var pets = petsService.pets;
 >   }
 > 
 >   angular
