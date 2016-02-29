@@ -211,27 +211,27 @@ inside of `app.js`.
 
 > **app.js**
 > ```diff
->   (function () {
->     function MainController () {
->       var vm = this;
-> -     vm.name = "Jonny";
-> +     vm.count = 0;
-> 
-> +     vm.reset = function () {
-> +       vm.count = 0;
-> +     }
-> 
-> +     vm.increment = function () {
-> +       vm.count++;
-> +     }
-> 
-> +     vm.decrement = function () {
-> +       vm.count--;
-> +     }
-> +   }
-> 
->     angular
->       .module('app', [])
->       .controller('mainController', MainController);
->   })();
+>  (function () {
+>    function MainController () {
+>      var vm = this;
+> -    vm.name = "Jonny";
+> +    vm.count = 0;
+>
+> +    vm.reset = function () {
+> +      vm.count = 0;
+> +    }
+>
+> +    vm.increment = function () {
+> +      vm.count++;
+> +    }
+>
+> +    vm.decrement = function () {
+> +      vm.count--;
+> +    }
+> +  }
+>
+>    angular
+>      .module('app', [])
+>      .controller('mainController', MainController);
+>  })();
 > ```
