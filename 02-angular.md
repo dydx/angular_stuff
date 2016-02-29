@@ -111,8 +111,9 @@ Another important thing is the empty array, `[]`, that we place after the comma
 in the `module` method:
 
 ```javascript
-  //...
-  .module('app', **`[]`**);
+  //...           |
+  //...           V
+  .module('app', []);
   //...
 ```
 
