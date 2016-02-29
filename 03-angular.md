@@ -34,4 +34,16 @@ Starting with a new `app.js` and a new `index.html`, we can get to work.
 > })();
 > ```
 
-
+> **index.html**
+> ```html
+> <!DOCTYPE html>
+>   <html lang="en">
+>     <head>
+>       <meta charset="UTF-8">
+>       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
+>       <script src="app.js"></script>
+>     </head>
+>   <body ng-app="petsApp">
+>   </body>
+> </html>
+> ```
