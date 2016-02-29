@@ -259,4 +259,31 @@ current count. `increment()` and `decrement()` add to and remove 1 from the
 `count`, and `reset()` does what it sounds like-- it resets the `count` back to
 0.
 
+Now that we've added the logic for a simple counter to `app.js`, we need to wire
+the functionality into our HTML
+
+> **index.html**
+> ```diff
+> <!DOCTYPE html>
+> <html lang="en">
+>   <head>
+>     <meta charset="UTF-8">
+>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
+>     <script src="app.js"></script> 
+>   </head>
+>   <body ng-app="app">
+>     <div ng-controller="mainController as vm">
+> -     <h2>Hello, {{vm.name}}</h2>
+> +     <h2>Counter App</h2>
+>
+> +     <div>{{vm.count}}</div>
+> 
+> +     <button ng-click="vm.increment()">+</button>
+> +     <button ng-click="vm.decrement()">-</button>
+> +     <button ng-click="vm.reset()">reset</button>
+>     </div>
+>   </body>
+> </html>
+> ```
+
 ![In Action](http://g.recordit.co/dQRIJyoD5y.gif)
