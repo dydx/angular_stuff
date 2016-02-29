@@ -108,7 +108,15 @@ telling it to do.
 > > https://docs.angularjs.org/error/$injector/modulerr?p0=app&p1=Error:%20%E2%80%A6ogleapis.com%2Fajax%2Flibs%2Fangularjs%2F1.5.0%2Fangular.min.js:20:449
 
 Another important thing is the empty array, `[]`, that we place after the comma
-in the `module` method. In the future, you'll be listing "dependencies" in here,
+in the `module` method:
+
+```javascript
+  //...
+  .module('app', **`[]`**);
+  //...
+```
+
+In the future, you'll be listing "dependencies" in here,
 which can either be built-in functionality that you'd like to use, or 3rd-party
 libraries that are made to work with Angular. We'll explore more of that later.
 For the time being, make sure to not forget this empty array, as Angular will
