@@ -247,3 +247,14 @@ inside of `app.js`.
 >
 > **Note:**
 > The red lines starting with `-` tell us what we're deleting in our changes
+
+All we've done here is attached three functions to our `vm`:
+
+* `reset()`
+* `increment()`
+* `decrement()`
+
+and attached a new variabled called `count` to our `vm` that contains the
+current count. `increment()` and `decrement()` add to and remove 1 from the
+`count`, and `reset()` does what it sounds like-- it resets the `count` back to
+0.
