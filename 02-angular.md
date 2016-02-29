@@ -202,16 +202,13 @@ With that saved, we now need to add some stuff to our HTML code:
 > </html>
 > ```
 
+Now in our HTML, we are simply asking for the value contained inside of
+`vm.name` and displaying it onto the page.
+
 Save your work and open it up in the browser. If all went well, you should end
 up with a page that looks like this:
 
 ![First Controller Demo](first-controller.png)
-
-So, what is going on here? There's a lot of new syntax going on. First things
-first, `app.js`.
-
-Then, in our HTML, we are simply asking for the value contained inside of
-`vm.name` and displaying it onto the page.
 
 ## Let's Add Some More Functionality
 
@@ -301,5 +298,7 @@ Secondly, we've added some buttons with `ng-click` `Directives`. Inside of these
 * `vm.increment()`
 * `vm.decrement()`
 * `vm.reset()`
+
+With our `app.js` and `index.html` saved, lets view it in the browser:
 
 ![In Action](http://g.recordit.co/dQRIJyoD5y.gif)
