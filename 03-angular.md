@@ -107,3 +107,20 @@ and pull our `pets` data into it:
 > +   .service('petsService', PetsService)
 >     .controller('petsController', PetsController);
 > })();
+
+With that saved, we can... simply load up our `index.html` and check to see that
+everything still works OK. Nothing we did in `app.js` affects the markup, which
+is nice!
+
+## Whats the big deal?
+
+You may be wondering what the fuss is about with this `Service`; moving an array
+from one object to another is not very impressive when taken at face value.
+
+For a small application, you'd probably be able to get away with having your
+data live in the `Controller`, but as your app grows and various bits start
+needing "shared resources", being able to quickly inject and consume a `Service`
+becomes vital.
+
+Now that `PetsService` is alive in our application, we can use it from any other
+`Controller`. ***That*** is nice.
