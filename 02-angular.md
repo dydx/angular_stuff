@@ -125,7 +125,7 @@ what it lets us do.
 
 In our `app.js` file, let's add the following code
 
-> `app.js`
+> **app.js**
 > ```diff
 > (function () {
 > + function MainController () {
@@ -145,7 +145,7 @@ In our `app.js` file, let's add the following code
 
 With that saved, we now need to add some stuff to our HTML code:
 
-> `index.html`
+> **index.html**
 > ```diff
 > <!DOCTYPE html>
 > <html lang="en">
@@ -202,7 +202,36 @@ In our example right now, we're referencing the controller with the string
 
 ## Let's Add Some More Functionality
 
-Going with what we know about `Controller`s, let's explore adding some new
+Going with what we know about `Controller`'s, let's explore adding some new
 features to our app.
 
+The first thing we're going to look at is adding methods to our `MainController`
+inside of `app.js`.
 
+
+> **app.js**
+> ```diff
+>   (function () {
+>     function MainController () {
+>       var vm = this;
+> -     vm.name = "Jonny";
+> +     vm.count = 0;
+> 
+> +     vm.reset = function () {
+> +       vm.count = 0;
+> +     }
+> 
+> +     vm.increment = function () {
+> +       vm.count++;
+> +     }
+> 
+> +     vm.decrement = function () {
+> +       vm.count--;
+> +     }
+> +   }
+> 
+>     angular
+>       .module('app', [])
+>       .controller('mainController', MainController);
+>   })();
+> ```
