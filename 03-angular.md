@@ -121,3 +121,7 @@ owner's name.
 
 How cool is that?
 
+If we view it in the browser, it should look something like this:
+
+![Pets App](pets-app.png)
+
