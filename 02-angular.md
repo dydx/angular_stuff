@@ -152,33 +152,6 @@ In our `app.js` file, let's add the following code
 >
 > The green lines that start with `+`'s denote what is *new* to the file
 
-With that saved, we now need to add some stuff to our HTML code:
-
-> **index.html**
-> ```diff
-> <!DOCTYPE html>
-> <html lang="en">
->   <head>
->     <meta charset="UTF-8">
->     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
->     <script src="app.js"></script> 
->   </head>
->   <body ng-app="app">
-> +   <div ng-controller="mainController as vm">
-> +     <h2>Hello, {{vm.name}}</h2>
-> +   </div>
->   </body>
-> </html>
-> ```
-
-Save your work and open it up in the browser. If all went well, you should end
-up with a page that looks like this:
-
-![First Controller Demo](first-controller.png)
-
-So, what is going on here? There's a lot of new syntax going on. First things
-first, `app.js`.
-
 In `app.js`, we are defining a new JavaScript function called `MainController`.
 Inside of `MainController`, we are assigning a variable `vm` (short for
 ViewModel) to `this`.
@@ -207,7 +180,38 @@ In our example right now, we're referencing the controller with the string
   //...
   .controller('mainController', MainController);
   //...
+
+With that saved, we now need to add some stuff to our HTML code:
+
+> **index.html**
+> ```diff
+> <!DOCTYPE html>
+> <html lang="en">
+>   <head>
+>     <meta charset="UTF-8">
+>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
+>     <script src="app.js"></script> 
+>   </head>
+>   <body ng-app="app">
+> +   <div ng-controller="mainController as vm">
+> +     <h2>Hello, {{vm.name}}</h2>
+> +   </div>
+>   </body>
+> </html>
+> ```
+
+Save your work and open it up in the browser. If all went well, you should end
+up with a page that looks like this:
+
+![First Controller Demo](first-controller.png)
+
+So, what is going on here? There's a lot of new syntax going on. First things
+first, `app.js`.
+
 ```
+
+Then, in our HTML, we are simply asking for the value contained inside of
+`vm.name` and displaying it onto the page.
 
 ## Let's Add Some More Functionality
 
@@ -285,5 +289,17 @@ the functionality into our HTML
 >   </body>
 > </html>
 > ```
+
+Let's take a second to go over what we're doing in the HTML. The reference to
+`vm.name` is now `vm.count`, which reflects the `vm.count` we defined in
+`app.js`. This is going to initially be set to 0, and will show up on the
+website as 0
+
+Secondly, we've added some buttons with `ng-click` `Directives`. Inside of these
+`ng-click`'s, we've specified our `Controller` methods:
+
+* `vm.increment()`
+* `vm.decrement()`
+* `vm.reset()`
 
 ![In Action](http://g.recordit.co/dQRIJyoD5y.gif)
