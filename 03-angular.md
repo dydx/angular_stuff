@@ -66,5 +66,6 @@ First, let's add a new `Controller` to `app.js`:
 > 
 >   angular
 >     .module('petsApp', [])
+> +   .controller('petsController', PetsController');
 > })();
 > ```
