@@ -258,3 +258,5 @@ and attached a new variabled called `count` to our `vm` that contains the
 current count. `increment()` and `decrement()` add to and remove 1 from the
 `count`, and `reset()` does what it sounds like-- it resets the `count` back to
 0.
+
+![In Action](http://g.recordit.co/dQRIJyoD5y.gif)
