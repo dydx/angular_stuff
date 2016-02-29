@@ -22,7 +22,11 @@ With this section, we're going to work on a simple app to showcase pets and
 who owns them. We will start by keeping the data in our `Controller` and then
 eventually migrating it into what Angular calls a `Service`.
 
-From a high level
+From a high level, a `Service` can be used in many ways, but it often used as a
+data container. Instead of representing data right in your `Controller`, you can
+do it in a `Service` and simply reference that elsewhere.
+
+This helps keep our `Controllers` "skinny"
 
 Starting with a new `app.js` and a new `index.html`, we can get to work.
 
@@ -124,4 +128,5 @@ How cool is that?
 If we view it in the browser, it should look something like this:
 
 ![Pets App](pets-app.png)
+
 
