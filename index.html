@@ -6,7 +6,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
   <script>
     (function () {
-      function PetsController () {
+      function PetsService () {
         var vm = this;
         vm.pets = [
           {name: 'Luna', type: 'dog', owner: 'Jos'},
@@ -15,8 +15,14 @@
         ];
       }
 
+      function PetsController (petsService) {
+        var vm = this;
+        vm.pets = petsService.pets;
+      }
+
       angular
         .module('app', [])
+        .service('petsService', PetsService)
         .controller('petsController', PetsController);
     })();
   </script>

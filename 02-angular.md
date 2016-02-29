@@ -489,7 +489,8 @@ If we view it in the browser, it should look something like this:
 
 We built on top of the previous lesson and got more comfortable using Angular's
 terminology, namely with `Directives` and `Controllers`. We also learned about
-Immediately Invoked Function Expressions (IIFEs).
+Immediately Invoked Function Expressions (IIFEs). We learned what `Filter`'s are
+and that we can use them to do things like sort lists.
 
 ## Review
 
@@ -499,6 +500,7 @@ In this section, we learned how to:
 * Use Immediately Invoked Function Expressions (IIFEs)
 * Use more of Angular's `Directives`
 * Write and inject `Controllers`
+* 
 
 ## What's To Come
 
