@@ -78,7 +78,7 @@ The first thing we're going to do is create a `PetsService` object in `app.js`,
 and pull our `pets` data into it:
 
 > **app.js**
-> ```javascript
+> ```diff
 > (function () {
 > + function PetsService () {
 > +   var vm = this;
