@@ -235,3 +235,6 @@ inside of `app.js`.
 >      .controller('mainController', MainController);
 >  })();
 > ```
+>
+> **Note:**
+> The red lines starting with `-` tell us what we're deleting in our changes
