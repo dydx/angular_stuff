@@ -6,42 +6,29 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
   <script>
     (function () {
-      function MainController () {
+      function PetsController () {
         var vm = this;
-        vm.count = 0;
-
-        vm.reset = function () {
-          vm.count = 0;
-        }
-
-        vm.increment = function () {
-          vm.count++;
-        }
-
-        vm.decrement = function () {
-          vm.count--;
-        }
-
-        vm.isCountZero = function () {
-          return vm.count === 0;
-        }
+        vm.pets = [
+          {name: 'Luna', type: 'dog', owner: 'Jos'},
+          {name: 'Boozer', type: 'dog', owner: 'Jos'},
+          {name: 'Sally', type: 'cat', owner: 'Josh'}
+        ];
       }
 
       angular
         .module('app', [])
-        .controller('mainController', MainController);
+        .controller('petsController', PetsController);
     })();
   </script>
 </head>
 <body ng-app="app">
-  <div ng-controller="mainController as vm">
-    <h2>Counter App</h2>
-
-    <div>{{vm.count}}</div>
-
-    <button ng-click="vm.increment()">+</button>
-    <button ng-click="vm.decrement()" ng-disabled="vm.isCountZero()">-</button>
-    <button ng-click="vm.reset()">reset</button>
+  <div ng-controller="petsController as vm">
+    <h2>Pets</h2>
+    <ul>
+      <li ng-repeat="pet in vm.pets | orderBy : 'owner'">
+        {{pet.owner}} has a {{pet.type}} named {{pet.name}}
+      </li>
+    </ul>
   </div>
 </body>
 </html>

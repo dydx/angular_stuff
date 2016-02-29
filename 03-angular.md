@@ -26,6 +26,8 @@ From a high level
 
 Starting with a new `app.js` and a new `index.html`, we can get to work.
 
+Here is the boilerplate code we're going to be starting with:
+
 > **app.js**
 > ```javascript
 > (function () {
@@ -46,4 +48,23 @@ Starting with a new `app.js` and a new `index.html`, we can get to work.
 >   <body ng-app="petsApp">
 >   </body>
 > </html>
+> ```
+
+First, let's add a new `Controller` to `app.js`:
+
+> **app.js**
+> ```diff
+> (function () {
+> + function PetsController () {
+> +   var vm = this;
+> +   vm.pets = [
+> +     {name: 'Luna', type: 'dog', owner: 'Jos'},
+> +     {name: 'Boozer', type: 'dog', owner: 'Jos'},
+> +     {name: 'Sally', type: 'cat', owner: 'Josh'}
+> +   ];
+> + }
+> 
+>   angular
+>     .module('petsApp', [])
+> })();
 > ```
